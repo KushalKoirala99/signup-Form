@@ -1,0 +1,125 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+:root {
+    --bgColor: #eef1f6;
+    --blue: #0048ba;
+    --dark-blue: #003399;
+}
+
+body{
+    height: 100vh;
+    background-color: var(--bgColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    display: flex;
+    max-width: 960px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0,0,0, 0.1);
+}
+
+.img-container {
+    flex-basis: 40%;
+    background: linear-gradient(45deg, rgba(0,0,0,0.6), rgba(0,72,186,0.7)), url('./asset/club.jpg') center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-container p {
+    color: white;
+    font-size: 2.3rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 6px rgba(0,0,0, 0.5);
+
+}
+
+.form-container{
+    flex: 1;
+    padding: 2rem;
+}
+
+form {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.box {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(3,1fr);
+    gap: 26px;
+}
+
+.item {
+    display: flex;
+    flex-flow: column;
+}
+
+.item label {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.item input {
+    padding: 10px;
+    border: 2px solid #e2e8f0;
+    border-radius: 6px;
+    transition: 0.3s;
+    font-size: 1rem;
+}
+
+.item input:focus {
+    border-color: var(--blue);
+    outline: none;
+    box-shadow: 0 0 8px rgba(0,72,186,0.2);
+}
+
+.submit-btn{
+    width: 100%;
+    padding: 12px;
+    flex: 1;
+    background: var(--blue);
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+    border: 1px solid black;
+}
+
+.submit-btn:hover {
+    background: var(--dark-blue);
+}
+
+.log-in-container {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 1rem;
+}
+
+.log-in-container a {
+    color:var(--blue);
+    text-decoration: none;
+    font-weight: 600;
+}
