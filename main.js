@@ -5,6 +5,24 @@ const password = document.querySelector('#password')
 const confirmPassword = document.querySelector('#confirmPassword')
 
 
+const togglePassword1 = document.querySelector('#togglePassword1')
+const togglePassword2 = document.querySelector('#togglePassword2')
+
+
+function togglePasswordVisibility(inputField, toggleButton) {
+    if(inputField.type === 'password'){
+        inputField.type = 'text';
+        toggleButton.textContent = 'Hide';
+    }else {
+        inputField.type = 'password'
+        toggleButton.textContent = 'Show';
+        
+    }
+}
+
+togglePassword1.addEventListener('click',() => togglePasswordVisibility(password,togglePassword1))
+togglePassword2.addEventListener('click',() => togglePasswordVisibility(confirmPassword,togglePassword2))
+
 function validateName(){
 
     const namePattern = /^[A-Za-z]+$/;
